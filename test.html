@@ -1,0 +1,589 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>wenhaiming</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h3><a name="文海名" class="md-header-anchor"></a><span>文海名</span></h3><p><strong><span>电话:18873881121 | 邮箱:18873881121@163.com</span></strong></p><p><strong>
+	<strong><span>个人主页:</span></strong><span></span><a href='https://top.offerdance.com/' target='_blank' class='url'>top.offerdance.com</a>
+	</strong>
+	</p><p>&nbsp;</p><h2><a name="个人信息" class="md-header-anchor"></a>
+	<span>个人信息</span></h2><ul><li><span>文海名 / 男 / 23岁</span></li><li><span>本科 湖南人文科技学院 / 信息学院 物联网工程专业 / 2015.09-2019.06</span></li><li><span>GitHub：</span><a href='https://github.com/Him-wen'><span>Him-wen</span></a></li><li>
+                        <p>期间辅修电子商务专业第二学位证书</p>
+                            <p>第四届全国移动应用开发大赛总决赛（MIAC）国家二等奖</p>
+                            <p>2016全国应用开发创新大赛总决赛（武汉）优胜奖</p>
+                            <p>全国高等院校数学能力挑战赛优秀奖</p>
+                            <p>第一届湖南省物联网大赛获团队优秀奖，挑战杯立项结题校支持项目</p>
+                            <p>获校三好学生称号、班干部、省优秀毕业生提名</p>
+                            <p>IOT/ACM实验室成员 17-18学年校奖学金</p>
+                            <p>创新创业学院第二届精英班学习获得毕业证书与优秀学员(20%)</p>
+                            <p> 中国联通云计算工程师认证</p>
+                    </li>
+</ul><p>&nbsp;</p><h2><a name="技能清单" class="md-header-anchor"></a><span>技能清单</span></h2><ul><li>
+	<span>熟悉数据结构和基本算法</span></li>
+	<li><span>使用Java、python、Javascript等编程语言</span></li>
+	<li><span>掌握开发Web应用、小程序、Android相关应用、熟悉面向对象编程思想以及面向对象编程</span></li><li><span>熟悉项目开发使用Git版本工具，有多人协作开发经验</span></li><li><span>了解深度学习与机器学习部分相关理论与原理、使用tensorflow框架以及相关库搭建深度学习模型</span></li><li><span>了解Python爬虫、使用爬取信息资源并进行数据清洗、提取特征</span></li><li><span>熟悉常见的设计模式、mysql 数据库以及优化原则</span></li><li><span>熟悉 Linux 开发环境，掌握常用 Linux 命令、了解ssl、https、cdn等配置、服务器相关linux部署、常用shell脚本编写</span></li><li><span>熟悉 TCP/UDP 协议以及 HTTP协议、熟悉网络规划部署、云计算规划</span></li></ul><p>&nbsp;</p>
+
+<h2><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h2>
+
+<h4><a name="中国联通湖南分公司产业研究院市分院－系统集成工程师（全职）" class="md-header-anchor"></a><span>中国联通湖南分公司产业研究院市创新业务部门－系统集成工程师（校招）2019.07-</span></h4><p><span>  <p><span>【工作内容】</span></p><ul><li><span>作为项目经理进行ICT集成、云计算项目以及设计规划、维护支持与设施、对政府企业进行技术支撑、输出相关项目解决方案,云资源池配置</span></li><li><span>负责相关政府单位项目网络组网规划方案、设备选型，对服务器、主机、应用系统的 技术支持</span></li>
+<li><span>协助网络工程师完成大数据中心机房托管服务器的运维安全、网络故障排查</span></li></ul><ul><li><span>编写部分shell脚本用于linux系统内部部署与维护</span></li><li><span>协同部门软件开发组负责部分开发内部使用小程序前端；</span></li></ul><p>&nbsp;</p>
+<h4><a name="强生亚太研发中心ADC-EDG(大数据)－后端开发实习生" class="md-header-anchor"></a><span>强生亚太研发中心ADC-EDG(大数据)－IT后端开发实习生 2018.06-2018.09</span></h4><p><span>  <p><span>【负责内容】</span></p><ul><li><span>J&J library system -协同开发一款强生亚研中心内部使用的文档图书系统，实现电子文档和纸质文档的管理查询和借阅</span></li><li><span>大数据后台数据处理项目 基于 maven 的 Java 项目做敏捷开发，与业务部门合作进行数据验证和处理</span></li>
+<li><span>参与公司内部项⽬snips(一种自动生成代码的工具)的功能完善以及 JavaSDK 的开发者文档的撰写，后期项目 API 代码测试及维护</span></li></ul><p>&nbsp;</p>
+
+<h2><a name="项目经历" class="md-header-anchor"></a><span>项目经历</span></h2>
+
+<h4><a name="基于IOT的农业监测系统-国赛项目 (MIAC) " class="md-header-anchor"></a><span>基于IOT的智能农业监测系统-国赛项目 (MIAC) 2016.09-2017.12</span></h4><p><span>  </p><p><span>【项目概述】目的是实现目标检测区域内，对多种无线传感器网络节点进行组网，对环境因素参数实时采集以及数据检测并自动处理</span></p><p><span>【负责内容】</span></p><ul><li><span>[团队]与1位指导老师、2位队员</span></li><li><span>[功能]使用eclipse开发可视化界面，实现了智能状态展示以及开关控制，多种传感器控制，实现不同传感器相互关联，相互控制；</span></li><li><span>并用 Android 和 web端 进行图形化展示数据管理以及实现 基于WiFi &蓝牙的多种传感器(红外烟雾温度等)终端，实时更新后台多种相关传感器数值，对智能硬件进行智能感应操作等实时功能</span></li></ul><p><span>【项目奖项】</span></p><ul><li><span>作品取得第四届全国移动应用开发大赛总决赛（武汉）国家二等奖（决赛150支队伍 排名8/150）</span></li></ul><p>&nbsp;</p>
+
+<h4><a name="技术分享交流社区" class="md-header-anchor"></a><span>基于LNMP的技术分享交流社区[1] | 求职者招聘信息CMS平台[2](不同架构)</span></h4><p><span>  </span><a href='https://campus.offerdance.com/'><span>社区预览链接</span></a><span> ｜ </span><a href='https://www.offerdance.com/'><span>平台预览链接</span></a></p>
+<p><span>【项目概述】致力于提供检索，交流和分享任何技术编程相关的问题及知识、编程招聘社区与平台</span></p>
+<p><span>【项目一内容】</span></p><ul><li><span>后端系统开发的逻辑设计与数据库设计、实现用户登录、发帖、评论、回复、不同用户不同权限设计等功能</span></li><li><span>前端界面仿知乎社区设计页面并编写代码，优化手机端页面</span></li><li><span>项目部署在腾讯云服务器、进行https、ssl等的配置，使用 Nginx 来配置与部署项目</span><strong><span>性能优化</span></strong>
+<span>后，加载慢，从服务器、CDN 等方面进行性能优化后，将首屏加载从原来的 7 秒减少为最复杂页面不超过 2 秒</span></li><li><span>首页大量图片，采取策略；图片资源存放在云</span><strong><span>对象存储</span></strong><span>；缩略图压缩。</span></li>
+<li><span>线上项目访问:</span><strong><span>cmapus.offerdance.com。</span></strong><span></span></li>
+</ul>
+<p><span>【项目二内容】</span></p><ul><li><span>完成从“调研-设计-实现-文档”等工作，主要负责系统功能及数据提交流程、相关源数据的管理与系统开发的逻辑设计等工作 负责云服务器、https、ssl等的配置，运用 Nginx 来配置与部署项目并上线及网站备案</span></li><li><span>使用div、css实现页面布局，使用js实现选项切换等等网页特效</span></li><li><span>目前已迭代到2.0版本、系统部署在腾讯cloud，已做了相关优化、访问速度、移动响应式布局”</span></li><li><span>服务器、CDN 等方面进行性能优化</span></li>
+<li><span>线上项目访问:</span><strong><span>www.offerdance.com。</span></strong><span></span></li>
+</ul>
+<p>&nbsp;</p>
+
+<h4><a name="微信小程序20199-----201911）" class="md-header-anchor"></a><span>微信小程序（2019.9 — 2019.11）</span></h4><p><span>  </span><span></span><a href='https://www.offerdance.com/wp-content/uploads/2020/04/gh_29ab198c3988_344.jpg'><span>预览小程序链接</span></a></p><p><span>【项目简介】[校招早报]名称，为企业和在校求职者提供招聘沟通的平台</span></p><p><span>【内容】</span></p><ul><li><span>进行前端页面设计，前端使用原生与 ThorUI 设计与布局，负责页面逻辑设计与终端适配工作；</span></li>
+<li><span>后端站点使用wordpress再次迭代开发，登录校验，接口设计，数据库设计优化，SSL配置等。</span></li></ul>
+<ul><li><span>完成项目中测试环境及线上环境的数据完整性、部分核心功能使用微信云函数开发
+代码的优化及封装可复用组件及功能函数类，方便项目中重复使用</span></li></ul><p>&nbsp;</p>
+
+<h3><a name="学习项目" class="md-header-anchor"></a><span>学习项目</span></h3>
+<h4><a name="基于内容过滤推荐(CFR)的视频个性内容推荐实现）" class="md-header-anchor">
+</a><span>蘑菇街-Vue全家桶</span></h4><p><span>  
+</a></p><ul>
+<li><span>
+在此项目中封装tabbar，navbar，better-scroll组件；面对复杂的数据，设置合适的存储结构对请求回来的数据 进行存储方便后续使用；</span></li></ul>
+<ul><li><span>
+引入better-scroll插件解决原生滚动卡顿的问题；利用better-scroll可以实时监听滚动 的位置快速高效的完成了上拉加载更多，回到顶部功能</span></li></ul>
+<ul><li><span>
+通过监听图片加载完成以及使用事件总线拿到scroll 组件的refresh函数，解决了首页中可滚动区域的bug；</span></li></ul>
+<ul><li><span>
+封装了refresh函数，对refresh操作频繁的问题进行防 抖优化处理；解决better-scroll插件导致tabcontrol吸顶效果失效的bug</span></li></ul>
+<p>&nbsp;</p>
+
+<h4><a name="基于机器学习SVM算法的动漫图像分类" class="md-header-anchor"></a><span>基于机器学习SVM算法的动漫图像分类</span></h4><p><span>  </a></p><ul><li><span>[内容]
+主要设计：数据预处理-训练-预测-调整参数-预测</span><span>使用numpy、pandas等库、soft margin机制调节SVM相关参数、优化提高准确率由开始的linear函数准确率88%提升到RBF核函数的95%</span></li>
+<li><span>[收获]
+了解机器学习SVM算法的基本原理、优化、调参以及训练技巧
+</span></li></ul>
+<p>&nbsp;</p>
+<h4><a name="基于深度学习的CNN模型图像验证码分类手写实现" class="md-header-anchor"></a><span>基于深度学习的CNN模型图像验证码分类手写实现</span></h4><p><span>  </a></p><ul><li><span>[主要工作]
+使用tensorflow框架，搭建一个非线性拟合神经网络模型，开始基于非线性函数模型进行训练，使用tensorboard可视化工具数据展示，准确率较低，后设计并编写卷积神经网络模型从输入层到卷积层再到输出层，构建训练模型并测试集准确率达到95%</span></li>
+<li><span>[收获]
+学习tensorflow框架以及相关库的使用，了解相关的loss、Activation Function、了解相关神经网络的搭建、调参、训练技巧
+</span></li></ul>
+<p>&nbsp;</p>
+
+
+<h2><a name="自我评价" class="md-header-anchor"></a><span>自我评价</span></h2><p><span>热爱学习、热爱生活、工作态度严谨认真、责任心强、有很好的团队合作能力、具备良好的分析、解决问题的思维。对计算机有强烈的兴趣，善于与他人沟通协作，希望深入地了解专业领域的发展情况趋势、已有的成果，不断训练自己的思维能力和创新能力</span></p>
+<h2><a name="期望规划" class="md-header-anchor"></a><span>期望规划</span></h2><p><span>认真学习相关专业课程，利用业余时间补学欠缺的专业知识。广泛阅读文献资料，与导师探讨学术问题的思考及实践方法。掌握专业的基础知识脉络，从中寻找自己感兴趣的研究点，并制定科研计划。与科研团队团结协作，多参加项目，培养实践能力，认真完成导师交代的任务，深入研究发展</span></p>
+
+
+
+<h2><a name="致谢" class="md-header-anchor"></a><span>致谢</span></h2><p><span>感谢您花时间阅读我的简历，期待能在研究阶段继续深造</span></p></div>
+</body>
+</html>
